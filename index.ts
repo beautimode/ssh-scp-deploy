@@ -9,7 +9,7 @@ try {
   const user = core.getInput('user');
   const key = core.getInput('key');
 
-  execSync(`echo -e "${key}" >__TEMP_INPUT_KEY_FILE`);
+  execSync(`echo "${key}" > __TEMP_INPUT_KEY_FILE`);
   execSync(`chmod 600 __TEMP_INPUT_KEY_FILE`);
   execSync(`scp -o StrictHostKeyChecking=no -v -i __TEMP_INPUT_KEY_FILE -P ${port} -r ${src} ${user}@${host}:${remote}`);
 

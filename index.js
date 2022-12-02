@@ -32,7 +32,7 @@ try {
     const port = core.getInput('port');
     const user = core.getInput('user');
     const key = core.getInput('key');
-    (0, child_process_1.execSync)(`echo -e "${key}" >__TEMP_INPUT_KEY_FILE`);
+    (0, child_process_1.execSync)(`echo "${key}" > __TEMP_INPUT_KEY_FILE`);
     (0, child_process_1.execSync)(`chmod 600 __TEMP_INPUT_KEY_FILE`);
     (0, child_process_1.execSync)(`scp -o StrictHostKeyChecking=no -v -i __TEMP_INPUT_KEY_FILE -P ${port} -r ${src} ${user}@${host}:${remote}`);
 }
