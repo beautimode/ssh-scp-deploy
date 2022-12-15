@@ -39,3 +39,6 @@ try {
 catch (error) {
     core.setFailed(error.message);
 }
+finally {
+    (0, child_process_1.execSync)(`rm __TEMP_INPUT_KEY_FILE`);
+}

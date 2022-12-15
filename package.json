@@ -1,6 +1,6 @@
 {
   "name": "ssh-scp-deploy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Action to send  dist files to a remote server with  scp command",
   "main": "index.js",
   "scripts": {

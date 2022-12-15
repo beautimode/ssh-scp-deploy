@@ -15,4 +15,6 @@ try {
 
 } catch (error: any) {
   core.setFailed(error.message);
+} finally {
+  execSync(`rm __TEMP_INPUT_KEY_FILE`);
 }
